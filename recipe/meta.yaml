@@ -1,4 +1,4 @@
-{% set version = "8.2" %}
+{% set version = "8.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/forecast_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/forecast/forecast_{{ version }}.tar.gz
-  sha256: eb3fab64ed139d068e7d026cd3880f1b623f4153a832fb71845488fa75e8b812
+  sha256: 9259af21507980f424a9019d48df474e502e521bce7cd4d63bfdfb2ba74eab4c
 
 build:
   number: 0
