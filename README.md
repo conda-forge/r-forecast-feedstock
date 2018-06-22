@@ -14,14 +14,16 @@ Summary: Methods and tools for displaying and analysing univariate time series f
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-forecast-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-forecast-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-forecast-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-forecast-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-forecast-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-forecast-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-forecast-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-forecast-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-forecast-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-forecast-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-forecast-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-forecast-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-forecast/badges/version.svg)](https://anaconda.org/conda-forge/r-forecast)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-forecast/badges/downloads.svg)](https://anaconda.org/conda-forge/r-forecast)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--forecast-green.svg)](https://anaconda.org/conda-forge/r-forecast) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-forecast.svg)](https://anaconda.org/conda-forge/r-forecast) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-forecast.svg)](https://anaconda.org/conda-forge/r-forecast) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-forecast.svg)](https://anaconda.org/conda-forge/r-forecast) |
 
 Installing r-forecast
 =====================
