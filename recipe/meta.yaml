@@ -35,6 +35,8 @@ requirements:
     - r-timedate
     - r-tseries
     - r-zoo
+    - r-urca
+    - r-uroot
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -52,6 +54,8 @@ requirements:
     - r-timedate
     - r-tseries
     - r-zoo
+    - r-urca
+    - r-uroot
     - libgcc  # [not win]
 
 test:
