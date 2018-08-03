@@ -15,7 +15,8 @@ source:
   sha256: eb3fab64ed139d068e7d026cd3880f1b623f4153a832fb71845488fa75e8b812
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,6 +24,12 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+  host:
     - r-base
     - r-rcpp >=0.11.0
     - r-rcpparmadillo >=0.2.35
@@ -35,9 +42,6 @@ requirements:
     - r-timedate
     - r-tseries
     - r-zoo
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -52,7 +56,6 @@ requirements:
     - r-timedate
     - r-tseries
     - r-zoo
-    - libgcc  # [not win]
 
 test:
   commands:
