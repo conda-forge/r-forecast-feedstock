@@ -1,4 +1,4 @@
-{% set version = "8.2" %}
+{% set version = "8.4" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/forecast_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/forecast/forecast_{{ version }}.tar.gz
-  sha256: eb3fab64ed139d068e7d026cd3880f1b623f4153a832fb71845488fa75e8b812
+  sha256: 695cdf0376f1f519a236bec52722c41ea5896f2064f1403d0ad4914c5611188f
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 1000
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -31,31 +31,35 @@ requirements:
     - {{ compiler('m2w64_cxx') }}  # [win]
   host:
     - r-base
-    - r-rcpp >=0.11.0
-    - r-rcpparmadillo >=0.2.35
     - r-colorspace
     - r-fracdiff
-    - r-ggplot2 >=2.0.0
+    - r-ggplot2 >=2.2.1
     - r-lmtest
     - r-magrittr
     - r-nnet
+    - r-rcpp >=0.11.0
     - r-timedate
     - r-tseries
+    - r-urca
+    - r-uroot
     - r-zoo
+    - r-rcpparmadillo >=0.2.35
 
   run:
     - r-base
-    - r-rcpp >=0.11.0
-    - r-rcpparmadillo >=0.2.35
     - r-colorspace
     - r-fracdiff
-    - r-ggplot2 >=2.0.0
+    - r-ggplot2 >=2.2.1
     - r-lmtest
     - r-magrittr
     - r-nnet
+    - r-rcpp >=0.11.0
     - r-timedate
     - r-tseries
+    - r-urca
+    - r-uroot
     - r-zoo
+    - r-rcpparmadillo >=0.2.35
 
 test:
   commands:
@@ -73,3 +77,4 @@ extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - philip-khor
