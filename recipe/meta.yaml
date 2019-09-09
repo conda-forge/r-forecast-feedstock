@@ -1,4 +1,4 @@
-{% set version = "8.7" %}
+{% set version = '8.9' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,21 +10,21 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/forecast_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/forecast/forecast_{{ version }}.tar.gz
-  sha256: 0d3aec2d10e05cb7961695f0639d3c4b848dbfd4f551c7bc699b9f95e06e3a39
+  sha256: ade3ec37f16c374b85f605780337a7a6349bfc8352caef319f927d36e4b57d04
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_cxx') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -33,7 +33,7 @@ requirements:
   host:
     - r-base
     - r-rcpp >=0.11.0
-    - r-rcpparmadillo >=0.2.35    
+    - r-rcpparmadillo >=0.2.35
     - r-colorspace
     - r-fracdiff
     - r-ggplot2 >=2.2.1
@@ -71,7 +71,8 @@ about:
   summary: Methods and tools for displaying and analysing univariate time series forecasts including
     exponential smoothing via state space models and automatic ARIMA modelling.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
@@ -79,12 +80,12 @@ extra:
     - philip-khor
 
 # Package: forecast
-# Version: 8.5
+# Version: 8.9
 # Title: Forecasting Functions for Time Series and Linear Models
 # Description: Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA modelling.
 # Depends: R (>= 3.0.2),
 # Imports: colorspace, fracdiff, ggplot2 (>= 2.2.1), graphics, lmtest, magrittr, nnet, parallel, Rcpp (>= 0.11.0), stats, timeDate, tseries, urca, zoo
-# Suggests: expsmooth, uroot, knitr, rmarkdown, rticles, testthat, methods
+# Suggests: uroot, knitr, rmarkdown, rticles, testthat, methods
 # LinkingTo: Rcpp (>= 0.11.0), RcppArmadillo (>= 0.2.35)
 # LazyData: yes
 # ByteCompile: TRUE
@@ -96,8 +97,8 @@ extra:
 # Encoding: UTF-8
 # RoxygenNote: 6.1.1
 # NeedsCompilation: yes
-# Packaged: 2019-01-16 04:32:27 UTC; hyndman
+# Packaged: 2019-08-22 03:02:51 UTC; hyndman
 # Author: Rob Hyndman [aut, cre, cph] (<https://orcid.org/0000-0002-2140-5352>), George Athanasopoulos [aut], Christoph Bergmeir [aut] (<https://orcid.org/0000-0002-3665-9021>), Gabriel Caceres [aut], Leanne Chhay [aut], Mitchell O'Hara-Wild [aut] (<https://orcid.org/0000-0001-6729-7695>), Fotios Petropoulos [aut] (<https://orcid.org/0000-0003-3039-4955>), Slava Razbash [aut], Earo Wang [aut], Farah Yasmeen [aut] (<https://orcid.org/0000-0002-1479-5401>), R Core Team [ctb, cph], Ross Ihaka [ctb, cph], Daniel Reid [ctb], David Shaub [ctb], Yuan Tang [ctb] (<https://orcid.org/0000-0001-5243-233X>), Zhenyu Zhou [ctb]
 # Maintainer: Rob Hyndman <Rob.Hyndman@monash.edu>
 # Repository: CRAN
-# Date/Publication: 2019-01-18 10:50:03 UTC
+# Date/Publication: 2019-08-22 11:50:02 UTC
