@@ -1,4 +1,4 @@
-{% set version = "8.11" %}
+{% set version = "8.12" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/forecast_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/forecast/forecast_{{ version }}.tar.gz
-  sha256: a12718b7ac1ab78708ef244e4a1cfd044af128de590e14b1d8aab3342d6cd12b
+  sha256: eb607fd584d66abf39b14c00d50111304e892a6e0778c9a8354195c6c92f92f9
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -68,11 +68,11 @@ test:
 about:
   home: http://pkg.robjhyndman.com/forecast, https://github.com/robjhyndman/forecast
   license: GPL-3
-  summary: Methods and tools for displaying and analysing univariate time series forecasts including
-    exponential smoothing via state space models and automatic ARIMA modelling.
+  summary: Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA
+    modelling.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
