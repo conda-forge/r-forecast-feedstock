@@ -67,7 +67,7 @@ test:
 
 about:
   home: http://pkg.robjhyndman.com/forecast, https://github.com/robjhyndman/forecast
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA
     modelling.
   license_family: GPL3
