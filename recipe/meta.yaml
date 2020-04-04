@@ -31,6 +31,7 @@ requirements:
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
   host:
+    - libblas
     - r-base
     - r-rcpp >=0.11.0
     - r-rcpparmadillo >=0.2.35
