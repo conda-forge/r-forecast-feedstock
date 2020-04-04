@@ -3,7 +3,7 @@ About r-forecast
 
 Home: http://pkg.robjhyndman.com/forecast, https://github.com/robjhyndman/forecast
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: BSD 3-Clause
 
