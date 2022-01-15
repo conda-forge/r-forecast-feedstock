@@ -1,4 +1,4 @@
-{% set version = "8.15" %}
+{% set version = "8.16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/forecast_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/forecast/forecast_{{ version }}.tar.gz
-  sha256: c73aabed083095b457ed875c240716686fbd41d1cbafa116b7b890a54b919174
+  sha256: 9f01eb895a883a7e1e23725b167b46edc1b0b152fd4120278aaa5f7b2621767f
 
 build:
   merge_build_host: true  # [win]
