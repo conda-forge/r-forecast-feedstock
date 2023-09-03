@@ -3,6 +3,7 @@ About r-forecast-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-forecast-feedstock/blob/main/LICENSE.txt)
 
+
 About r-forecast
 ----------------
 
@@ -11,6 +12,7 @@ Home: http://pkg.robjhyndman.com/forecast, https://github.com/robjhyndman/foreca
 Package license: GPL-3.0-only
 
 Summary: Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA modelling.
+
 About r-forecast
 ----------------
 
