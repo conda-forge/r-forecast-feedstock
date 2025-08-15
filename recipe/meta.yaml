@@ -12,10 +12,14 @@ source:
   sha256: fb0bf1f1bfa3e3df379d6a1ebce9e64d92829eefedde5400d13578f37bd61646
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -32,6 +36,7 @@ requirements:
     - r-timedate                 # [build_platform != target_platform]
     - r-tseries                  # [build_platform != target_platform]
     - r-urca                     # [build_platform != target_platform]
+    - r-withr                    # [build_platform != target_platform]
     - r-zoo                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
@@ -39,6 +44,7 @@ requirements:
     - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ compiler('fortran') }}        # [osx and arm64]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -59,6 +65,7 @@ requirements:
     - r-timedate
     - r-tseries
     - r-urca
+    - r-withr
     - r-zoo
   run:
     - r-base
@@ -74,6 +81,7 @@ requirements:
     - r-timedate
     - r-tseries
     - r-urca
+    - r-withr
     - r-zoo
 
 test:
